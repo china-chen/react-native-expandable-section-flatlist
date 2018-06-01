@@ -121,7 +121,7 @@ class ExpandableList extends Component {
               !!this.state.memberOpened.get(sectionId)) : null}
         </TouchableOpacity>
         <ScrollView scrollEnabled={false}>
-          { renderRow ? renderRow(memberArr, index) : null }
+          { renderRow ? renderRow(memberArr, index, !!this.state.memberOpened.get(sectionId)) : null }
           { memberArr.length > 0 && renderSectionFooterX ? renderSectionFooterX(item, sectionId) : null }
         </ScrollView>
       </View>
